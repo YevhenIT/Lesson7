@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Задача 0. Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+        function seasonOfTheYear(numberOfTheMonth) {
+            if (numberOfTheMonth >= 1 && numberOfTheMonth <= 12) {
+                if (numberOfTheMonth >= 3 && numberOfTheMonth <= 5) {
+                    return 'Весна';
+                } else if (numberOfTheMonth >= 6 && numberOfTheMonth <= 8) {
+                    return 'Літо';
+                } else if (numberOfTheMonth >= 9 && numberOfTheMonth <= 11) {
+                    return 'Осінь';
+                } else {
+                    return 'Зима';
+                }
+            }
+        }
+
+        const whaSeason = prompt('Введіть номер місяця')
+        alert(seasonOfTheYear(whaSeason))
+        //====================================================================================
+
+        //Задача 1. Створити функцію, яка за номером місяця повертає його назву.
+        // function назваМісяця(numMonths) {
+        //     const months = [
+        //         "Січень",
+        //         "Лютий",
+        //         "Березень",
+        //         "Квітень",
+        //         "Травень",
+        //         "Червень",
+        //         "Липень",
+        //         "Серпень",
+        //         "Вересень",
+        //         "Жовтень",
+        //         "Листопад",
+        //         "Грудень"
+        //     ];
+
+        //     // Перевіряємо, чи номер місяця знаходиться в діапазоні від 1 до 12.
+        //     if (numMonths >= 1 && numMonths <= 12) {
+        //         // Повертаємо назву місяця, вибравши індекс з масиву (віднімаємо 1, оскільки масив індексується з 0).
+        //         return months[numMonths - 1];
+        //     } else {
+        //         return 'Неправильний номер місяця';
+        //     }
+        // }
+
+        // // Приклад використання функції:
+        // const numMonths = prompt("Введіть номер місяця")
+        // const назва = назваМісяця(numMonths); // Визначаємо назву місяця за номером.
+        // alert(`Місяць з номером ${numMonths} має назву: ${назва}`);
+        //====================================================================================
+
+        // //Задача 2. Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.
+        // function workDay(numberDay) {
+        //     if (numberDay >= 1 && numberDay <= 7) {
+        //         if (numberDay <= 5) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     } else {
+        //         return 'Неправильний номер дня тижня';
+        //     }
+        // }
+
+        // const numberDay = parseInt(prompt('Введіть номер дня тижня (від 1 до 7)'));
+        // const result = workDay(numberDay);
+
+        // if (typeof result === 'boolean') {
+        //     if (result) {
+        //         alert(`День з номером ${numberDay} є робочим.`);
+        //     } else {
+        //         alert(`День з номером ${numberDay} є вихідним.`);
+        //     }
+        // } else {
+        //     alert(result);
+        // }
+        //====================================================================================
+
+        //Задача 3. Створити окремі функції, які для 4 чисел знаходять:
+        // 1) суму;
+        // 2) добуток;
+        // 3)середнє арифметичне;
+        // 4)мінімальне значення.
+
+        // // Функція для знаходження суми 4 чисел
+        // function findSum(a, b, c, d) {
+        //     return a + b + c + d;
+        // }
+
+        // // Функція для знаходження добутку 4 чисел
+        // function findProduct(a, b, c, d) {
+        //     return a * b * c * d;
+        // }
+
+        // // Функція для знаходження середнього арифметичного 4 чисел
+        // function findAverage(a, b, c, d) {
+        //     return (a + b + c + d) / 4;
+        // }
+
+        // // Функція для знаходження мінімального значення серед 4 чисел
+        // function findMin(a, b, c, d) {
+        //     return Math.min(a, b, c, d);
+        // }
+
+        // // Приклад використання функцій
+        // const num1 = 5;
+        // const num2 = 10;
+        // const num3 = 15;
+        // const num4 = 20;
+
+        // const sumResult = findSum(num1, num2, num3, num4);
+        // const productResult = findProduct(num1, num2, num3, num4);
+        // const averageResult = findAverage(num1, num2, num3, num4);
+        // const minResult = findMin(num1, num2, num3, num4);
+
+        // document.write('Сума:', sumResult);
+        // document.write('Добуток:', productResult);
+        // document.write('Середнє арифметичне:', averageResult);
+        // document.write('Мінімальне значення:', minResult);
+        //====================================================================================
+
+        // Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів:
+        // кількість парних, кількість додатних, кількість більших за 100.
+        // function findNumbersInfo(num1, num2, num3) {
+        //     let evenCount = 0;
+        //     let positiveCount = 0;
+        //     let greaterThan100Count = 0;
+
+        //     // Перевірка першого числа
+        //     if (num1 % 2 === 0) {
+        //         evenCount++;
+        //     }
+        //     if (num1 > 0) {
+        //         positiveCount++;
+        //     }
+        //     if (num1 > 100) {
+        //         greaterThan100Count++;
+        //     }
+
+        //     // Перевірка другого числа
+        //     if (num2 % 2 === 0) {
+        //         evenCount++;
+        //     }
+        //     if (num2 > 0) {
+        //         positiveCount++;
+        //     }
+        //     if (num2 > 100) {
+        //         greaterThan100Count++;
+        //     }
+
+        //     // Перевірка третього числа
+        //     if (num3 % 2 === 0) {
+        //         evenCount++;
+        //     }
+        //     if (num3 > 0) {
+        //         positiveCount++;
+        //     }
+        //     if (num3 > 100) {
+        //         greaterThan100Count++;
+        //     }
+
+        //     return {
+        //         evenCount,
+        //         positiveCount,
+        //         greaterThan100Count
+        //     };
+        // }
+
+        // // Приклад використання функції
+        // const num1 = 50;
+        // const num2 = 120;
+        // const num3 = -30;
+
+        // const results = findNumbersInfo(num1, num2, num3);
+
+        // console.log('Кількість парних чисел:', results.evenCount);
+        // console.log('Кількість додатних чисел:', results.positiveCount);
+        // console.log('Кількість чисел більших за 100:', results.greaterThan100Count);
+        //====================================================================================
+
+        //  Задача 5. Створити окремі функції, які переводять:
+        // 1 Сантиметри у дюйми;
+        // 2 Кілограми у фунти;
+        // 3 Кілометри у милі.
+        //1
+        // function centimetersToInches(centimeters) {
+        //     const inches = centimeters / 2.54
+        //     return inches
+        // }
+        // //2
+        // function kilogramsToPounds(kilograms) {
+        //     const pounds = kilograms * 2.20462
+        //     return pounds;
+        // }
+        // //3
+        // function kilometersToMiles(kilometers) {
+        //     const miles = kilometers / 1.60934; // Одна миля еквівалентна приблизно 1.60934 кілометрам
+        //     return miles;
+        // }
+
+        // const centimeters = prompt("Введіть свої сантиметри")
+        // const inches = centimetersToInches(centimeters)
+        // console.log(`${centimeters} сантиметрів = ${inches} дюймів`)
+
+        // const kilograms = prompt("Введіть свої кілограми")
+        // const pounds = kilogramsToPounds(kilograms)
+        // console.log(`${kilograms} кілограмів = ${pounds} фунтів`)
+
+        // const kilometers = prompt("Введіть свої кілометри")
+        // const miles = kilometersToMiles(kilometers)
+        // console.log(`${kilometers} кілометрів = ${miles} миль`)
+        //====================================================================================
+
+        //Задача 10. Дано покази температур (довільна кількість). Розробити функцію,
+        //яка дозволить знайти середнє значення для додатних показів температури.
+        // function findAveragePositiveTemperature(temperatures) {
+        //     let sum = 0;
+        //     let count = 0;
+
+        //     for (let i = 0; i < temperatures.length; i++) {
+        //         if (temperatures[i] > 0) {
+        //             sum += temperatures[i];
+        //             count++;
+        //         }
+        //     }
+
+        //     if (count === 0) {
+        //         return "Немає додатніх показів температури";
+        //     }
+
+        //     return sum / count;
+        // }
+
+        // // Приклад використання:
+        // const temperatureData = [10, -5, 15, -2, 20, 25, -8, 12];
+        // const averageTemperature = findAveragePositiveTemperature(temperatureData);
+        // console.log("Середня температура для додатних показів: " + averageTemperature);
+    </script>
+</body>
+
+</html>

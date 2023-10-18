@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function testFunction() {
+        //     document.write('Hello!')
+        //     alert('Hi!')
+        //     console.log('Test!')
+        // }
+        // testFunction()
+        //====================================================================================
+        // Задача. Знайти розмір заробітної плати
+        // (ставка (salary) + надбавка (benefits) - податок (tax%))
+        // function getFinalSalary(salary, benefits, tax) {
+        //     return (salary + benefits) * (1 - tax / 100)
+        //     //document.write('return')
+        // }
+        // let salaryResult = getFinalSalary(50000, 15000, 25)
+        // //getFinalSalary()
+        //====================================================================================
+        // Задача. Визначити середню оцінку з трьох предметів
+        // function getAverageScore(score1, score2, score3) {
+        //     return (score1 + score2 + score3) / 3
+        // }
+        // let resultScore = getAverageScore(12, 10, 9)
+        //====================================================================================
+        // function greeting(userName) {
+        //     console.log(`Hello ${userName}`)
+        //     console.log(`Wait ${userName}`)
+        //     console.log(`Bye ${userName}`)
+        // }
+        // greeting('Ivan')
+        //====================================================================================
+        //1. Опис функції
+        // function getMax(num1, num2) {
+        //     let result
+        //     if (num1 > num2)
+        //         result = num1
+        //     else
+        //         result = num2
+
+        //     return result
+        // }
+        // let max = getMax(11, 77)
+        // alert(max)
+        //====================================================================================
+        // function getGreetingWithLocale(locale) {
+        //     switch (locale) {
+        //         case 'ua': return 'привіт'
+        //         case 'en': return 'hello'
+        //         default: 'sorry'
+        //             break;
+        //     }
+        // }
+        // const nyLocale = prompt('Введіть код країни')
+        // alert(getGreetingWithLocale(nyLocale))
+
+
+        // або
+        // function getGreetingWithLocale(locale) {
+        //     let result
+        //     switch (locale) {
+        //         case 'ua': result = 'привіт'
+        //             break;
+        //         case 'en': result = 'hello'
+        //         default: 'sorry'
+        //             break;
+        //     }
+        //     return result
+        // }
+
+
+        //====================================================================================
+        // var1
+        // let x1 = function () {
+        //     alert ('1111111111')
+        // }
+        // var2
+        // let x1 = () => alert('11111111')
+        //====================================================================================
+        // Описуємо функцію для знаходження
+        // максимального серед двох чисел
+        // function max(c1, c2) {
+        //     if (c1 > c2)
+        //         return c1
+        //     else
+        //         return c2
+        // }
+
+        // // Введення необхідних даних
+        // let a = parseFloat(prompt('a='))
+        // let b = parseFloat(prompt('b='))
+
+        // // Обчислення значення m1
+        // let d1 = max(a, b)
+        // let d2 = max(-a, b)
+
+        // m1 = max(d1, d2)
+
+        // // Обчислення значення m2
+        // m2 = max(a, -b)
+
+        // S = m1 + m2
+
+        // document.write(`S= ${S}`)
+        //====================================================================================
+        // Задача. Двоє гравців кидають двічі разів кубик і визначається сумарна кількість балів. Визначити переможця
+        //1. Функція для визначення кількості балів в результаті підкидання
+        // function getDiceScore() {
+        //     return 1 + Math.floor(Math.random() * 6)
+        // }
+        // //2. Функція для визначення кількості балів гравця
+        // function getPlayerScrore() {
+        //     let score1 = getDiceScore()
+        //     let score2 = getDiceScore()
+        //     return score1 + score2
+        // }
+        // //3. Використання функцій
+        // let player1Score = getPlayerScrore()
+        // let player2Score = getPlayerScrore()
+        // if (player1Score > player2Score)
+        //     alert('Player 1')
+        // else if (player1Score < player2Score)
+        //     alert('Plsyer2')
+        // else alert('Нічья')
+        //====================================================================================
+
+        // function getGreetingWithLocale() {             // Function Declaration
+        // }
+
+        // let getGreetingWithLocale = function (){       // Function  Expression
+        // }
+
+        // let getGreetingWithLocale = () => {
+        // }
+
+        // let getDiceScore = () => 1 + Math.floor(Math.random()* 6)
+        //====================================================================================
+        // let getPlayerScrore = function () {
+        //         let score1 = getDiceScore()
+        //         let score2 = getDiceScore()
+        //         return score1 + score2
+        //     }
+
+        // let getPlayerScrore =  () => {
+        //         let score1 = getDiceScore()
+        //         let score2 = getDiceScore()
+        //         return score1 + score2
+        //     }
+
+        //let getPlayerScrore = () => scogetDiceScore() + getDiceScore
+        //====================================================================================
+        // Обчислити. S = Max(a,b) + Min(c,d) + Max(a,c)
+        //            S =    m1    +     m2   +    m3
+        // function getMax(num1, num2) {
+        //     return num1 > num2 ? num1 : num2
+        // }
+
+        // function getMin(num1, num2) {
+        //     return num1 < num2 ? num1 : num2
+        // }
+        // //----------------------------------------------------
+        // let a = 9, b = 7, c = 5, d = 3
+        // // let m1 = getMax (a,b)
+        // // let m2 = getMin (c,d)
+        // // let m3 = getMax (a,c)
+        // // let s = m1+m2+m3
+
+        // let s = getMax(a, b) + getMin(c, d) + getMax(a, c)
+        // alert(s)
+        //====================================================================================
+        // Дано 4 числа. Знайти суму та добуток як результат однієї функії
+        // function getSumProd(num1, num2) {
+        //     let sum = num1 + num2
+        //     let prod = num1 * num2
+        //     return [sum, prod]
+        // }
+        // let res = getSumProd(2, 9)
+        // //let [s, p] = getSumProd9(2, 9)
+
+        // alert(`Sum = ${res[0]}`)
+        // alert(`Prod = ${res[1]}`)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function назваМісяця(numMonths) {
+            const months = [
+                "Січень",
+                "Лютий",
+                "Березень",
+                "Квітень",
+                "Травень",
+                "Червень",
+                "Липень",
+                "Серпень",
+                "Вересень",
+                "Жовтень",
+                "Листопад",
+                "Грудень"
+            ];
+
+            // Перевіряємо, чи номер місяця знаходиться в діапазоні від 1 до 12.
+            if (numMonths >= 1 && numMonths <= 12) {
+                // Повертаємо назву місяця, вибравши індекс з масиву (віднімаємо 1, оскільки масив індексується з 0).
+                return months[numMonths - 1];
+            } else {
+                return 'Неправильний номер місяця';
+            }
+        }
+
+        // Приклад використання функції:
+        const numMonths = prompt("Введіть номер місяця")
+        const назва = назваМісяця(numMonths); // Визначаємо назву місяця за номером.
+        alert(`Місяць з номером ${numMonths} має назву: ${назва}`);
+    </script>
+</body>
+
+</html>
